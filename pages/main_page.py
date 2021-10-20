@@ -18,3 +18,12 @@ class MainPage(BasePage):
 	def press_enter(self):
 		search_string = self.browser.find_element(*MainPageLocators.SEARCH_STRING)
 		search_string.send_keys(Keys.ENTER)
+
+	def should_see_image(self):
+		assert self.is_element_present(*MainPageLocators.IMAGES), \
+    	    'На странице отсутствует ссылка "Картинки"'
+
+	def open_images(self):
+		images = self.browser.find_element(*MainPageLocators.IMAGES)
+		images.click()
+		self.browser.switch_to.window(self.browser.window_handles[1])
