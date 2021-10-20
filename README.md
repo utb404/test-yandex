@@ -32,7 +32,7 @@ pip install -r requirements.txt
 
 Скрипт запускается командой 
 ```
-pytest test_main_page.py
+pytest test_yandex_page.py
 ``` 
 где `url` - ваша ссылка.
 
