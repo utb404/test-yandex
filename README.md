@@ -35,6 +35,7 @@ pip install -r requirements.txt
 pytest test_yandex_page.py
 ``` 
 Существует возможность запуска сценариев по отдельности с использованием маркировки.
+
 Для первого сценария:
 ```
 pytest search test_yandex_page.py
