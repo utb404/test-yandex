@@ -27,13 +27,20 @@ Python3 должен быть уже установлен.
 pip install -r requirements.txt
 ```
 Для работы скрипта требуется установить браузер Google Chrome и webdriver Chrome.
+Возможна работа с браузером Firefox и webdriver geckodriver.
 
-[Инструкция для установки webdriver'а](https://selenium-python.com/install-chromedriver-chrome)
+[Инструкция для установки webdriver'а Chrome](https://selenium-python.com/install-chromedriver-chrome)
+[Инструкция для установки webdriver'а Geckodriver](https://selenium-python.com/install-geckodriver)
 
-Скрипт запускается командой 
+Скрипт запускается командой:
 ```
 pytest test_yandex_page.py
 ``` 
+По умолчанию скрипт работает с браузером Chrome. Для работы с Firefox скрипт запускается командой:
+```
+pytest browser_name=firefox test_yandex_page.py
+```
+
 Существует возможность запуска сценариев по отдельности с использованием маркировки.
 
 Для первого сценария:
