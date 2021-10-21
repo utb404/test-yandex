@@ -34,7 +34,15 @@ pip install -r requirements.txt
 ```
 pytest test_yandex_page.py
 ``` 
-где `url` - ваша ссылка.
+Существует возможность запуска сценариев по отдельности с использованием маркировки.
+Для первого сценария:
+```
+pytest search test_yandex_page.py
+```
+Для второго сценария:
+```
+pytest image test_yandex_page.py
+```
 
 ### Цель проекта
 
