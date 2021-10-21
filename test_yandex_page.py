@@ -5,6 +5,7 @@ from pages.image_page import ImageSearchPage
 url = 'https://yandex.ru'
 word_for_search = 'тензор'
 
+@pytest.mark.search
 def test_search_string(browser):
 	main_page = MainPage(browser, url)
 	main_page.open()
@@ -15,6 +16,8 @@ def test_search_string(browser):
 	result_page = SearchResultPage(browser, browser.current_url)
 	result_page.query_in_result()
 
+	
+@pytest.mark.image
 def test_image_search(browser):
 	main_page = MainPage(browser, url)
 	main_page.open()
